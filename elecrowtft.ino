@@ -12,7 +12,7 @@ int color = WHITE;  //Paint brush color
 unsigned int colors[8] = {BLACK, RED, GREEN, BLUE, CYAN, YELLOW, WHITE, GRAY1};
 
 const int relayArray[] = { 22, 24, 26, 28, 30, 32, 34, 36, 23, 25, 27, 29, 31, 33, 35, 37 };
-char * buttonText[] = { "L up", "Ldwn", "drop", "load", "1FWD", "1REV", "2FWD", "2REV", "VSOP", "VSCL", "MXUP", "MXDW", "HYD", "VAC", "BFWD", "BREV" };
+const char * buttonText[] = { "L up", "Ldwn", "drop", "load", "1FWD", "1REV", "2FWD", "2REV", "VSOP", "VSCL", "MXUP", "MXDW", "HYD", "VAC", "BFWD", "BREV" };
 
 unsigned long prevTouchMilis = 0;
 
@@ -96,7 +96,7 @@ void drawSquare(int x, int y, byte index) {
 
 void drawRelayButtonText(int x, int y, byte index) {
   byte fontSize = 2;
-  byte margin = 15;  
+  byte margin = 15;    
   Tft.drawString(buttonText[index], x, y + margin, fontSize, WHITE);  
 }
 
